@@ -52,12 +52,14 @@ sidebar: right
 widgets:
 - search
 - social
+- advertise
 - recent_posts
+- tagcloud
 - category
 - tag
-- tagcloud
 - archive
 - friend
+- reading
 
 
 # Social Links
