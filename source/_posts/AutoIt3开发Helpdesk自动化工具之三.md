@@ -8,7 +8,7 @@ tags:
 - 自动化
 title: AutoIt3开发Helpdesk自动化工具之三:系统配置
 categories: 技术分享
-photos: /images/autoit3.png
+photos: /images/photos/autoit3.png
 ---
 
 本章将结合示例，演示如何编写自动配置系统的脚本
@@ -51,7 +51,7 @@ photos: /images/autoit3.png
 
 当电脑在外网或脱域、administrator密码被篡改或不便告知用户、用户忘记了域账户的登录密码等极端情况下，无法登录到桌面时，可使用admin用户登录到桌面后运行远程协助软件
 
-![](/images/170423_01_02_01.jpg)
+![](/images/20170423/170423_01_02_01.jpg)
     
      #cs ----------------------------------------------------------------------------
     
@@ -150,13 +150,13 @@ photos: /images/autoit3.png
     ;;定义变量$itPassword存储IT的密码
     Global $itPassword = "Password@1024"
 
-![](/images/170423_01_03_01.jpg)
+![](/images/20170423/170423_01_03_01.jpg)
     
     ;;定义变量$hostName存储用户交互中输入的计算机名
     Global $hostName
     Global $hostName = InputBox("输入","请输入计算机名：","")
 
-![](/images/170423_01_03_02.jpg)
+![](/images/20170423/170423_01_03_02.jpg)
     
     If IsAdmin() Then
        ;;打开系统属性控制台
@@ -170,7 +170,7 @@ photos: /images/autoit3.png
     ;;进入“更改”
     Send("!c")
     
-![](/images/170423_01_03_03.jpg)  
+![](/images/20170423/170423_01_03_03.jpg)  
     
     WinWaitActive("计算机名/域更改","计算机名(&C):")
     SLEEP(500)
@@ -187,7 +187,7 @@ photos: /images/autoit3.png
     ;;点击“确定”
     ControlClick("计算机名/域更改","计算机名(&C):","Button6","left",1)
     
-![](/images/170423_01_03_04.jpg)  
+![](/images/20170423/170423_01_03_04.jpg)  
     
     WinWaitActive("Windows 安全")
     SLEEP(500)
@@ -200,7 +200,7 @@ photos: /images/autoit3.png
     ;;点击“确定”
     ControlClick("Windows 安全","","Button2","left",1)
     
-![](/images/170423_01_03_05.jpg)  
+![](/images/20170423/170423_01_03_05.jpg)  
 
     WinWaitActive("计算机名/域更改","欢迎加入 awesomeit.com 域")
     SLEEP(500)
@@ -222,7 +222,7 @@ photos: /images/autoit3.png
            EndIf
     WEnd
     
-![](/images/170423_01_03_06.jpg) 
+![](/images/20170423/170423_01_03_06.jpg) 
     
     WinWaitActive("计算机名/域更改","确定")
     SLEEP(500)

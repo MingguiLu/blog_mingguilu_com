@@ -7,7 +7,7 @@ tags:
 - "warning: Clone succeeded, but checkout failed."
 title: Windows下的git_clone问题
 categories: 技术分享
-photos: /images/git_00.png
+photos: /images/photos/git_00.png
 ---
 
 近期为了方便学习数据挖掘与数据分析，将系统由Linux Mint换回windows10开发者预览版，并安装了Ubuntu on Windows 10，由于硬盘格式化了，需要从Github上克隆博客代码，却遇到了问题。

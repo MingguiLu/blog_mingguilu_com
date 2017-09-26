@@ -8,11 +8,11 @@ tags:
 - Github Pages 
 - Markdown
 categories: 技术分享
-photos: /images/jennych_01.png
+photos: /images/20170214/jennych_01.png
 
 ---
 
-![](/images/hugo_github_markdown.png)
+![](/images/20170214/hugo_github_markdown.png)
 
 ###  一  准备
 
@@ -57,7 +57,7 @@ Hugo是由Go语言实现的静态网站生成器。其特点是：简单、易�
 
 在`Repositories`页面点击`New`创建新仓库
 
-![](media/git_jenny_01.png)
+![](/images/20170214/git_jenny_01.png)
 
 以下是`JennyCh`托管在`Github`个人主页和博客项目的仓库
 
@@ -178,7 +178,7 @@ Hugo站点下包含如下目录和文件：
 	git clone Ｇithub远程仓库地址
 	#Github远程仓库地址分为两种：https和ssh ，可以在仓库主页中点开"Clone or Download"，点击`Use Https`或`Use SSH`可分别查看仓库地址
 
-![](/images/git_jenny_02.png)
+![](/images/20170214/git_jenny_02.png)
 
 	$ git clone git@github.com:jennych/jennych_blog_hugo.git
 	Cloning into 'jennych_blog_hugo'...

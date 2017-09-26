@@ -8,7 +8,7 @@ tags:
 - 自动化
 title: AutoIt3开发Helpdesk自动化工具之二:常用语法
 categories: 技术分享
-photos: /images/autoit3.png
+photos: /images/photos/autoit3.png
 ---
 
 在正式开始脚本工具编写之前，先熟悉一下AutoIt3常用的语法

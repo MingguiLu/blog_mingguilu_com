@@ -8,13 +8,13 @@ tags:
 - Blog
 title: 使用Hugo和Github搭建静态博客之填坑
 categories: 技术分享
-photos: /images/gan_00.png
+photos: /images/photos/gan_00.png
 ---
 
 > 我的静态博客已经搭建成功了，并且使用Markdown记录了过程，但期间踩了一路的坑，今天总结一下其中一个：Hugo成功部署到Github Pages，但访问博客时不加载网页布局和样式。
 
 这算是遇到最大的坑了，前后折腾了半个月的时间，直到找到了组织（Hugo交流QQ群：512499080），群主大大[@coderzh](http://www.coderzh.com/) 一语道破天机。
-![](/images/hugo_tk_01.png)
+![](/images/20161214/hugo_tk_01.png)
 
 <!--more-->
 
@@ -76,4 +76,4 @@ clone spf13.com的博客项目中`baseurl` 也是 `http://`
 
 #### *彩蛋*
 附上群主大大[@coderzh](http://www.coderzh.com/)如何一语道破天机
-![](/images/hugo_tk_02.png)
+![](/images/20161214/hugo_tk_02.png)

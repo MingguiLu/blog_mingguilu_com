@@ -7,7 +7,7 @@ tags:
 - markdown
 categories: 思考感悟
 description: 
-photos: /images/gan_00.png
+photos: /images/20170114/gan_00.png
 ---
 
 去年7月在机缘巧合之下接触了静态博客的概念，深入了解了一些知识之后，特别欣喜，决定动手搭建一个自己的静态博客。时间一晃到了年底，当着手实现的时候发现并不简单
@@ -29,7 +29,7 @@ photos: /images/gan_00.png
 
 * 因为频繁的`git commit`，`commit message`每次随性而写，回头`git log`一看全是一句话概括，具体改了什么自己也看不懂了
 
-![](/images/gan_01.png)
+![](/images/20170114/gan_01.png)
 
 * 当写文档时，前一篇没写完搁置了，接着完成了另外一篇，这时commit并push就很尴尬了
 
@@ -41,6 +41,6 @@ photos: /images/gan_00.png
 
 * 在[《Git 最佳实践：commit msg》](http://blog.jobbole.com/109197/)关于`commit message`规范的指导下，重新创建了版本库，并在写message时尝试写简单易懂的标题和详尽明了的内容
 
-![](/images/gan_02.png)
+![](/images/20170114/gan_02.png)
 
 近期刚好在看一本关于Devops的书《持续交付 - 发布可靠软件的系统方法》，本书前2章着重讲述了使用版本控制对构建软件可重复且可靠的自动化发布的重要意义。而这次git的实践，有助于理解书中的内容，最终使用“Continuous Delivery”作为博客标题也是因为这本书。

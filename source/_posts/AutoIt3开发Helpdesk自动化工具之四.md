@@ -8,7 +8,7 @@ tags:
 - 自动化
 title: AutoIt3开发Helpdesk自动化工具之四:软件安装
 categories: 技术分享
-photos: /images/autoit3.png
+photos: /images/photos/autoit3.png
 ---
 
 本章将结合示例，演示如何编写自动安装软件的脚本
@@ -37,7 +37,7 @@ photos: /images/autoit3.png
     Global $administratorUserName = "administrator"
     Global $administratorPassword = "Root@1024"
     
-![](/images/170425_01_01_01.jpg)
+![](/images/20170425/170425_01_01_01.jpg)
     
     If IsAdmin() Then
        Run("\\wh-filesrv-01\Software\Adobe\Adobe_flashplayer_installer.exe")
@@ -59,7 +59,7 @@ photos: /images/autoit3.png
     
 Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会报错，需要使用if条件判断语句处理报错窗口
 
-![](/images/170425_01_01_02.jpg)
+![](/images/20170425/170425_01_01_02.jpg)
     
     WinWaitActive("")
     ;;获取当前活动窗口的文本，存储到变量tempFlashText中
@@ -69,12 +69,12 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        SLEEP(500)
        ControlClick($tempFlashTitle,"下列发生冲突的应用程序","Button1","left",1)
        
-![](/images/170425_01_01_03.jpg)
+![](/images/20170425/170425_01_01_03.jpg)
        
        ;;弹出消息框提示用户，2秒后自动消失
        MsgBox(64,"提示","请关闭IE浏览器后再尝试运行安装程序！",2)
        
-![](/images/170425_01_01_04.jpg)
+![](/images/20170425/170425_01_01_04.jpg)
        
     Else
        ;;等待安装完成
@@ -112,7 +112,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        RunAs($administratorUserName,@ComputerName,$administratorPassword,0,"\\wh-filesrv-01\Software\Linphone\Linphone-3.10.2-win32.exe","")
     EndIf
     
-![](/images/170425_01_02_01.jpg)
+![](/images/20170425/170425_01_02_01.jpg)
     
     WinWaitActive("")
     ;;获取当前活动窗口的文本，存储到变量tempLinphoneText中
@@ -128,7 +128,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        ControlClick("Linphone 3.10.2 安装","Linphone is already installed","Button2","left",1)
        WinWaitClose("Linphone 3.10.2 安装","Linphone is already installed")
        
-![](/images/170425_01_02_02.jpg)
+![](/images/20170425/170425_01_02_02.jpg)
        
     ;;如果tempResult为False，表示Linphone未安装，可继续完成安装
     Else
@@ -139,7 +139,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        Send("!n")
        SLEEP(500)
        
-![](/images/170425_01_02_03.jpg)
+![](/images/20170425/170425_01_02_03.jpg)
        
        WinWaitActive("Linphone 3.10.2 安装","许可证协议")
        SLEEP(500)
@@ -147,7 +147,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        Send("!i")
        SLEEP(500)
        
-![](/images/170425_01_02_04.jpg)
+![](/images/20170425/170425_01_02_04.jpg)
        
        WinWaitActive("Linphone 3.10.2 安装","选择安装位置")
        SLEEP(500)
@@ -155,7 +155,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        Send("!n")
        SLEEP(500)
        
-![](/images/170425_01_02_05.jpg)
+![](/images/20170425/170425_01_02_05.jpg)
        
        WinWaitActive("Linphone 3.10.2 安装",'选择“开始菜单”文件夹')
        SLEEP(500)
@@ -163,7 +163,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        Send("!n")
        SLEEP(500)
        
-![](/images/170425_01_02_06.jpg)
+![](/images/20170425/170425_01_02_06.jpg)
        
        WinWaitActive("Linphone 3.10.2 安装","选择组件")
        SLEEP(500)
@@ -176,7 +176,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        ;;点击“安装（I）”
        Send("!i")
        
-![](/images/170425_01_02_07.jpg)
+![](/images/20170425/170425_01_02_07.jpg)
        
        WinWaitActive("Linphone 3.10.2 安装",'正在完成“Linphone 3.10.2”安装向导')
        SLEEP(1000)
@@ -214,19 +214,19 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        RunAs($administratorUserName,@ComputerName,$administratorPassword,0,"\\wh-filesrv-01\Software\Cisco\Cisco.VPN.Client.v5.0.07.0290.x64\setup.exe","")
     EndIf
     
-![](/images/170425_01_03_01.jpg)
+![](/images/20170425/170425_01_03_01.jpg)
     
     WinWaitActive("WinZip Self-Extractor - setup.exe","To unzip all files in setup.exe")
     SLEEP(500)
     ControlClick("WinZip Self-Extractor - setup.exe","To unzip all files in setup.exe","Button4","left",1)
     
-![](/images/170425_01_03_02.jpg)
+![](/images/20170425/170425_01_03_02.jpg)
     
     WinWaitActive("WinZip Self-Extractor","确定")
     SLEEP(500)
     ControlClick("WinZip Self-Extractor","确定","Button1","left",1)
     
-![](/images/170425_01_03_03.jpg)
+![](/images/20170425/170425_01_03_03.jpg)
     
     WinWaitActive("Cisco Systems VPN Client 5.0.07.0290","This installation can be displayed in multiple languages")
     SLEEP(500)
@@ -235,7 +235,7 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
     
 如果已安装过Cisco VPN Client软件，再重复安装，将会有下图所示的报错窗口，需要使用if条件判断语句处理报错窗口
 
-![](/images/170425_01_03_09.jpg)
+![](/images/20170425/170425_01_03_09.jpg)
     
     ;;如果存在标题为“Installer informaton”,文本内容包含"Error 28000:"的活动窗口，说明该软件已安装，可结束安装程序
     If WinExists("Installer Information","Error 28000:") Then
@@ -244,21 +244,21 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        SLEEP(500)
        ControlClick("Installer Information","Error 28000: Before installing the Cisco Systems VPN Client 5.0.07.0290","Button1","left",1)
     
-![](/images/170425_01_03_10.jpg)
+![](/images/20170425/170425_01_03_10.jpg)
     
        WinWaitActive("Fatal Error","Installation ended prematurely because of an error")
        SLEEP(500)
        ControlClick("Fatal Error","Installation ended prematurely because of an error","Button1","left",1)
        WinWaitClose("Fatal Error","Installation ended prematurely because of an error")
     
-![](/images/170425_01_03_04.jpg)
+![](/images/20170425/170425_01_03_04.jpg)
     
     Else
        WinWaitActive("Cisco Systems VPN Client 5.0.07.0290 Setup","Welcome to the Cisco Systems VPN Client")
        SLEEP(500)
        Send("!n")
     
-![](/images/170425_01_03_05.jpg)
+![](/images/20170425/170425_01_03_05.jpg)
     
        WinWaitActive("Cisco Systems VPN Client 5.0.07.0290 Setup","License Agreemen")
        SLEEP(500)
@@ -266,20 +266,20 @@ Adobe Flash Player安装程序和IE浏览器会冲突，导致安装过程中会
        SLEEP(500)
        Send("!n")
     
-![](/images/170425_01_03_06.jpg)
+![](/images/20170425/170425_01_03_06.jpg)
     
        WinWaitActive("Cisco Systems VPN Client 5.0.07.0290 Setup","Destination Folder")
        SLEEP(500)
        Send("!n")
     
-![](/images/170425_01_03_07.jpg)
+![](/images/20170425/170425_01_03_07.jpg)
     
        WinWaitActive("Cisco Systems VPN Client 5.0.07.0290 Setup","Ready to Install the Application")
        SLEEP(500)
        Send("!n")
        SLEEP(500)
     
-![](/images/170425_01_03_08.jpg)
+![](/images/20170425/170425_01_03_08.jpg)
     
        WinWaitActive("Cisco Systems VPN Client 5.0.07.0290 Setup","successfully installed")
        ;;将vpn客户端配置文件拷贝到“C:\Program Files (x86)\Cisco Systems\VPN Client\Profiles”下

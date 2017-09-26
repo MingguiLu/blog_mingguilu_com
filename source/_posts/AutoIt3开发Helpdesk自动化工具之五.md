@@ -8,7 +8,7 @@ tags:
 - 自动化
 title: AutoIt3开发Helpdesk自动化工具之五:多任务组合
 categories: 技术分享
-photos: /images/autoit3.png
+photos: /images/photos/autoit3.png
 ---
 
 前两篇示例中，分别创建了系统配置和软件安装的3个脚本，通过“Compile Script to .exe (x86/x64)”将.au3脚本转换为.exe可执行程序，之后运行对应程序即可进行自动安装配置。

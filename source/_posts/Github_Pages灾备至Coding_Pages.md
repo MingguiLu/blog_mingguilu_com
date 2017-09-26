@@ -7,7 +7,7 @@ tags:
 - GitCafe
 title: Github_Pages灾备至Coding_Pages
 categories: 技术分享
-photos: /images/170226_01_02.jpg
+photos: /images/photos/170226_01_02.jpg
 ---
 
 周四晚间在家访问我托管在Github Pages上的Blog时发现网站打不开，确认本地网络没问题，尝试清理浏览器缓存，刷新系统缓存，问题依旧。下意识的回想起来今天我修改代码啦？调整过DNSPod的解析记录啦？还是站点没备案被和谐了？......打开微博刷新了一下，看到关注的几个技术大V:Easy、刘巍峰、梁斌penny都发布或转发了Github无法访问的消息，我有点惊讶：卧槽！why？
@@ -16,7 +16,7 @@ photos: /images/170226_01_02.jpg
 
 随即查看了DNSPod的监控，看到托管在Github Pages的三个站点全部告警。
 
-![](/images/170226_01_01.jpg)
+![](/images/20170226/170226_01_01.jpg)
 
 零点前后部分地区开始恢复访问，但周五上午我在工地访问Github依然时断时续，速度极慢，而github.io始终无法访问，直到中午才恢复正常。事后没能找到关于本次Github无法访问的详细解析，但发现相对我这样的Git小白用户，真正的开发人员似乎都见怪不怪，这次只是又一次而已。
 
@@ -28,11 +28,11 @@ photos: /images/170226_01_02.jpg
 
 起初我是冲着[GitCafe](https://gitcafe.com/)去的，但现在已经合并到[Coding](https://coding.net)了。
 
-![](/images/170226_01_01_01.png)
+![](/images/20170226/170226_01_01_01.png)
 
 ### 2. 创建项目的同时导入Github的仓库
 
-![](/images/170226_01_02_01.png)
+![](/images/20170226/170226_01_02_01.png)
 
 ### 3. 本地.git版本库追加Coding远程仓库地址
 
@@ -101,7 +101,7 @@ photos: /images/170226_01_02.jpg
 
 ### 5. 开启Coding仓库的Pages服务并绑定域名
 
-![](/images/170226_01_05_01.png)
+![](/images/20170226/170226_01_05_01.png)
 
 ### 6. 在DNSPod的增加域名别名解析记录至pages.coding.me.，并设置为默认线路，xxx.github.io设置为国外线路
 

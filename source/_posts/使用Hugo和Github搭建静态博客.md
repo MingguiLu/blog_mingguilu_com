@@ -8,7 +8,7 @@ tags:
 - Github Pages
 - blog
 categories: 技术分享
-photos: /images/hugo_00.png
+photos: /images/photos/hugo_00.png
 ---
 
 > 我的静态博客使用Hugo生成，部署在Github Pages个人主页上，为了完成搭建，期间学习了Hugo、Git、Markdown。由于接触静态博客不久，对很多东西一知半解，本文仅记录了在Windows 10上基于Hugo作者[Steve Francia](https://stevefrancia.com/)的个人博客[http://spf13.com/](http://spf13.com/)的源代码定制自己博客的过程，绝不权威，仅供参考。
@@ -37,7 +37,7 @@ Git全局配置
 	id_rsa.pub	公钥，可告诉任何人
 
 登录Github，依次点击"settings"——>"SSH and GPG keys"——>"New SSH Key"
-![](/images/git_13_01.png)
+![](/images/20161202/git_13_01.png)
 
 填写Title，在Key文本框里粘贴`id_rsa.pub`文件的内容，点击"Add SSH Key"
 
@@ -92,7 +92,7 @@ clone大神spf13的博客项目源代码：[spf13.com](https://github.com/spf13/
 
 在浏览器输入localhost:1313,查看效果:
 
-![](/images/hugo_2_1_01.png)
+![](/images/20161202/hugo_2_1_01.png)
 
 ### 2.2 删除多余文件，修改项目名称
 
@@ -125,7 +125,7 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 	Initialized empty Git repository in D:/HelloWorld/hugo/IMkind_blog_hugo/.git/
 
 ### 2.3 修改配置文件config.toml
-![](/images/hugo_2_3_01.png)
+![](/images/20161202/hugo_2_3_01.png)
 
 	baseurl = "https://imkind.github.io/"
 	title = "Continuous  Delivery"
@@ -150,11 +150,11 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 启动站点，在浏览器可以看到效果了：
 
-![](/images/hugo_2_3_02.png)
+![](/images/20161202/hugo_2_3_02.png)
 
 
 ### 2.4 修改博客副标题
-![](/images/hugo_2_4_01.png)
+![](/images/20161202/hugo_2_4_01.png)
 
 在 layouts\partials\subheader.html
 
@@ -172,10 +172,10 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 例如：`.icon-happy` 即 笑脸图标，浏览器查看效果：
 
-![](/images/hugo_2_4_02.png)
+![](/images/20161202/hugo_2_4_02.png)
 
 ### 2.5 修改导航条
-![](/images/hugo_2_5_01.png)
+![](/images/20161202/hugo_2_5_01.png)
 
 在 layouts\partials\nav.html
 
@@ -254,14 +254,14 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 注意：必须往每篇博文正文写入一段内容，否则在页面上点击对应的导航标题都会跳转到空白页面。
 
-![](/images/hugo_2_5_02.png)
+![](/images/20161202/hugo_2_5_02.png)
 
 导航栏每行默认显示四个标题，超过会另取一行。可随意增加`<li>...</li>`数量，并创建对应的目录,如下：
 
-![](/images/hugo_2_5_03.png)
+![](/images/20161202/hugo_2_5_03.png)
 
 ### 2.6 修改侧边栏分享和社交
-![](/images/hugo_2_6_01.png)
+![](/images/20161202/hugo_2_6_01.png)
 
 在 layouts\partials\social.html 按需增减、修改`<li>...</li>`
 
@@ -293,11 +293,11 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 浏览器查看效果
 
-![](/images/hugo_2_6_02.png)
+![](/images/20161202/hugo_2_6_02.png)
 
 ### 2.7 修改脚注
 
-![](/images/hugo_2_7_01.png)
+![](/images/20161202/hugo_2_7_01.png)
 
 在 layouts\partials\footer.html 修改脚注内容
 
@@ -316,15 +316,15 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 在浏览器查看效果
 
-![](/images/hugo_2_7_02.png)
+![](/images/20161202/hugo_2_7_02.png)
 
 ### 2.8 修改博文正文显示页的布局
 
-![](/images/hugo_2_8_01.png)
+![](/images/20161202/hugo_2_8_01.png)
 
 #### 2.8.1 修改博客作者相关介绍
 
-![](/images/hugo_2_8_1_01.png)
+![](/images/20161202/hugo_2_8_1_01.png)
 
 在 layouts\partials\details.html  对作者介绍部分 `<div><section id="author">...</section></div>` 稍作修改即可，由于本人实在太过平淡无奇，索性去掉这一部分
 
@@ -336,7 +336,7 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 #### 2.8.2 修改博文创建时间、字数统计、阅读时间、tags、topics的显示位置
 
-![](/images/hugo_2_8_2_01.png)
+![](/images/20161202/hugo_2_8_2_01.png)
 
 将博文创建时间、字数统计、阅读时间、tags、topics的显示位置调整到标题和正文之间
 
@@ -368,11 +368,11 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 在浏览器查看效果
 
-![](/images/hugo_2_8_2_02.png)
+![](/images/20161202/hugo_2_8_2_02.png)
 
 #### 2.8.3 修改上下篇链接的显示位置
 
-![](/images/hugo_2_8_3_01.png)
+![](/images/20161202/hugo_2_8_3_01.png)
 
 在 layouts\partials\details.html 中删除或注释掉上下篇链接相关代码
 
@@ -458,7 +458,7 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 	#main>div,footer>div,#meta>div,#meta>section,#content,#comments>div,#prevnext>div{max-width:100%}
 
 在浏览器查看效果
-![](/images/hugo_2_8_3_02.png)
+![](/images/20161202/hugo_2_8_3_02.png)
 
 ### 2.9 修改字号大小
 
@@ -488,7 +488,7 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 ### 2.10 修改网站标题
 
-![](/images/hugo_2_10_01.png)
+![](/images/20161202/hugo_2_10_01.png)
 
 在 layouts\partials\header.html
 
@@ -498,7 +498,7 @@ Ctrl+C停止站点运行，修改目录名为自己的项目名称
 
 	<title> {{ .Title }} - imkind.github.io </title>
 
-![](/images/hugo_2_10_02.png)
+![](/images/20161202/hugo_2_10_02.png)
 
 ### 2.11 修改og标签
 摘自知乎：
@@ -535,15 +535,15 @@ spf13.com默认使用了[Disqus](https://disqus.com/)评论系统，我去注册
 
 #### 2.12.1 注册[多说](http://duoshuo.com/)评论系统
 打开多说首页，点击“登录”，使用SNS账号登录，我选择了微博。
-![](/images/hugo_2_12_1_01.png)
+![](/images/20161202/hugo_2_12_1_01.png)
 
 #### 2.12.2 创建站点
 登录之后就跳转到站点配置的页面
-![](/images/hugo_2_12_2_01.png)
+![](/images/20161202/hugo_2_12_2_01.png)
 
 #### 2.12.3 获取植入代码
 工具——>获取代码——>稳定版
-![](/images/hugo_2_12_3_01.png)
+![](/images/20161202/hugo_2_12_3_01.png)
 
 #### 2.12.4 植入多说代码
 在 layouts\partials\disqus.html
@@ -592,7 +592,7 @@ spf13.com默认使用了[Disqus](https://disqus.com/)评论系统，我去注册
 
 在浏览器中博文下方查看效果
 
-![](/images/hugo_2_12_5_01.png)
+![](/images/20161202/hugo_2_12_5_01.png)
 
 
 ### 2.13 代码高亮
@@ -636,7 +636,7 @@ spf13.com默认使用了[Disqus](https://disqus.com/)评论系统，我去注册
 
 注册[百度统计](http://tongji.baidu.com)，在“管理”中“新增网站”
 
-![](/images/hugo_2_14_01.png)
+![](/images/20161202/hugo_2_14_01.png)
 
 拷贝“统计代码”至 layouts\partials\header.html 的`</head>`标签前
 
@@ -654,7 +654,7 @@ spf13.com默认使用了[Disqus](https://disqus.com/)评论系统，我去注册
 
 注册[Google Analytics (分析)](http://www.google.cn/intl/zh-CN_ALL/analytics/features/analysis-tools.html)，在“管理”——“媒体资源”中“创建新媒体资源”
 
-![](/images/hugo_2_15_01.png)
+![](/images/20161202/hugo_2_15_01.png)
 
 拷贝“跟踪代码”至 layouts\partials\header.html 的`</head>`标签前
 
@@ -760,7 +760,7 @@ spf13.com默认使用了[Disqus](https://disqus.com/)评论系统，我去注册
 	Branch master set up to track remote branch master from origin.
 
 ### 4. 部署成功，在浏览器访问 https://[your-github-account].github.io 就看到自己的博客了。
-![](/images/hugo_4_01.png)
+![](/images/20161202/hugo_4_01.png)
 
 #### *参考*
 * [Steve Francia](http://spf13.com/)

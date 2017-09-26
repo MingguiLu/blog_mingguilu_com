@@ -6,7 +6,7 @@ tags:
 - gitbash
 title: Git-everything-is-local
 categories: 技术分享
-photos: /images/git_00.png
+photos: /images/photos/git_00.png
 ---
 
 ### 1. 安装git
@@ -44,7 +44,7 @@ photos: /images/git_00.png
 	git clone https://github.com/[github-account]/[project-name].git
 
 ### 4. 添加及提交文件
-![](/images/git_3_01.png)
+![](/images/20161208/git_3_01.png)
 
 添加文件到staying area
 
@@ -90,7 +90,7 @@ photos: /images/git_00.png
 	echo "*~" > .gitignore
 
 ### 6. 查看文件区别
-![](/images/git_6_01.png)
+![](/images/20161208/git_6_01.png)
 
 查看working directory 和 staying area 之间的区别
 
@@ -109,7 +109,7 @@ photos: /images/git_00.png
 	git diff --stat [--staged|HEAD]
 
 ### 7. 撤销误操作
-![](/images/git_7_01.png)
+![](/images/20161208/git_7_01.png)
 
 从git repository 撤销到staying area
 
@@ -152,7 +152,7 @@ photos: /images/git_00.png
 	git stash pop
 
 ### 10. 图解commit对象
-![](/images/git_10_01.png)
+![](/images/20161208/git_10_01.png)
 
 查看commit记录
 
@@ -238,7 +238,7 @@ commit对象类型说明
 	id_rsa.pub	公钥，可告诉任何人
 
 登录Github，依次点击"settings"——>"SSH and GPG keys"——>"New SSH Key"
-![](/images/git_13_01.png)
+![](/images/20161208/git_13_01.png)
 
 填写Title，在Key文本框里粘贴`id_rsa.pub`文件的内容，点击"Add SSH Key"
 
@@ -257,7 +257,7 @@ commit对象类型说明
 
 ### 15. 从Github远程库克隆
 创建Github Repositories远程库
-![](/images/git_15_01.png)
+![](/images/20161208/git_15_01.png)
 
 把远程库克隆到本地
 
