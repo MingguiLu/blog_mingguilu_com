@@ -7,7 +7,7 @@ tags:
 - GitCafe
 title: Github_Pages灾备至Coding_Pages
 categories: 技术分享
-photos: /images/photos/170226_01_02.jpg
+photos: /images/20170226/170226_01_02.jpg
 ---
 
 周四晚间在家访问我托管在Github Pages上的Blog时发现网站打不开，确认本地网络没问题，尝试清理浏览器缓存，刷新系统缓存，问题依旧。下意识的回想起来今天我修改代码啦？调整过DNSPod的解析记录啦？还是站点没备案被和谐了？......打开微博刷新了一下，看到关注的几个技术大V:Easy、刘巍峰、梁斌penny都发布或转发了Github无法访问的消息，我有点惊讶：卧槽！why？
