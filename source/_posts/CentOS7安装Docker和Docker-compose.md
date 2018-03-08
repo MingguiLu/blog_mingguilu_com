@@ -233,11 +233,11 @@ Docker-EE是付费版本，但可以免费体验1个月，点击`Start 1 Month T
 
 ###### 添加可执行权限
 
-[mingguilu@localhost ~]$ sudo chmod +x /usr/local/bin/docker-compose 
-[sudo] mingguilu 的密码：
-[mingguilu@localhost ~]$ 
-[mingguilu@localhost ~]$ ls -lh /usr/local/bin/docker-compose 
--rwxr-xr-x. 1 root root 8.1M 3月   6 12:58 /usr/local/bin/docker-compose
+    [mingguilu@localhost ~]$ sudo chmod +x /usr/local/bin/docker-compose 
+    [sudo] mingguilu 的密码：
+    [mingguilu@localhost ~]$ 
+    [mingguilu@localhost ~]$ ls -lh /usr/local/bin/docker-compose 
+    -rwxr-xr-x. 1 root root 8.1M 3月   6 12:58 /usr/local/bin/docker-compose
 
 ###### 查看docker-compose版本
 
