@@ -263,6 +263,8 @@ Docker-EE是付费版本，但可以免费体验1个月，点击`Start 1 Month T
 
     [mingguilu@localhost ~]$ sudo yum install -y python-pip
 
+    [mingguilu@localhost ~]$ sudo pip install --upgrade pip
+
 ###### pip安装Docker-compose
 
     [mingguilu@localhost ~]$ sudo yum install -y docker-compose
