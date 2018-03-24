@@ -5,7 +5,7 @@ tags:
 - git
 - gitbash
 title: Git-everything-is-local
-categories: 技术分享
+categories: 编程之路
 photos: /images/photos/git_00.png
 ---
 

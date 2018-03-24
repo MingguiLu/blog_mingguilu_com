@@ -6,7 +6,7 @@ tags:
 - Coding Pages
 - GitCafe
 title: Github_Pages灾备至Coding_Pages
-categories: 技术分享
+categories: 趣玩尝新
 photos: /images/20170226/170226_01_02.jpg
 ---
 

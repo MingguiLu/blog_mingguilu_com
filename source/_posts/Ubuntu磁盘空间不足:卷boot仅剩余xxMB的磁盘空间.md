@@ -6,7 +6,7 @@ description: ""
 tags:
 - Linux
 - Ubuntu
-categories: 技术分享
+categories: 运维之道
 photos: /images/20170227/170227_01_00_01.png
 
 ---

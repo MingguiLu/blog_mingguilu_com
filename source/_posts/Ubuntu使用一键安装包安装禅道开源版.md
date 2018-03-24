@@ -8,7 +8,7 @@ tags:
 - Ubuntu
 - 禅道
 - Zentao
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/zentao.jpg
 
 ---

@@ -7,7 +7,7 @@ tags:
 - Pages
 - Blog
 title: 使用Hugo和Github搭建静态博客之填坑
-categories: 技术分享
+categories: 趣玩尝新
 photos: /images/photos/gan_00.png
 ---
 

@@ -7,7 +7,7 @@ tags:
 - hugo
 - Github Pages 
 - Markdown
-categories: 技术分享
+categories: 趣玩尝新
 photos: /images/20170214/jennych_01.png
 
 ---

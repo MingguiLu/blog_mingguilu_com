@@ -7,7 +7,7 @@ tags:
 - Docker
 - container
 - 容器
-categories: 技术分享
+categories: 运维之道
 ---
 
 #### Docker简介

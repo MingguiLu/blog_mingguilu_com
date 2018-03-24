@@ -9,7 +9,7 @@ tags:
 - rpm
 - yum
 title: Linux软件安装与维护
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/linux_software.jpg
 
 ---

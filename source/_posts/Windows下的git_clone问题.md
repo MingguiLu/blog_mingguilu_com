@@ -6,7 +6,7 @@ tags:
 - git clone
 - "warning: Clone succeeded, but checkout failed."
 title: Windows下的git_clone问题
-categories: 技术分享
+categories: 编程之路
 photos: /images/photos/git_00.png
 ---
 

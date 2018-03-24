@@ -7,7 +7,7 @@ tags:
 - CentOS
 - Samba
 title: CentOS7使用YUM搭建Samba文件共享
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/samba.jpg
 
 ---

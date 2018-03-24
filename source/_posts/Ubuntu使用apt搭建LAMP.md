@@ -7,7 +7,7 @@ tags:
 - Linux
 - Ubuntu
 - LAMP
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/lamp.png
 
 ---

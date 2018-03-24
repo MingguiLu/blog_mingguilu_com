@@ -7,7 +7,7 @@ tags:
 - hugo
 - Github Pages
 - blog
-categories: 技术分享
+categories: 趣玩尝新
 photos: /images/photos/hugo_00.png
 ---
 

@@ -8,7 +8,7 @@ tags:
 - Ubuntu
 - python3
 - matplotlib
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/matplotlib.jpg
 
 ---

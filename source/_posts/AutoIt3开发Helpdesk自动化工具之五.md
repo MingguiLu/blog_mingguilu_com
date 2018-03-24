@@ -7,7 +7,7 @@ tags:
 - Helpdesk
 - 自动化
 title: AutoIt3开发Helpdesk自动化工具之五:多任务组合
-categories: 技术分享
+categories: 运维之道
 photos: /images/photos/autoit3.png
 ---
 

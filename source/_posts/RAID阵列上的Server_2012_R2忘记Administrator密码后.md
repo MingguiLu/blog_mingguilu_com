@@ -6,7 +6,7 @@ date: 2018-03-02 15:27:52
 tags:
 - Windows Server
 - RAID
-categories: 技术分享
+categories: 运维之道
 ---
 
 配置了RAID5阵列的Dell服务器丢失了Administrator密码，运行着Windows Server 2012 R2，WinPE没有加载RAID驱动也无能为力，最后使用Windows Server 2012 R2的安装光盘重置了密码

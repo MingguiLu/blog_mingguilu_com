@@ -8,7 +8,7 @@ tags:
 - readline()
 - readlines()
 title: Python3从文件中读取数据
-categories: 技术分享
+categories: 编程之路
 photos: /images/photos/python.png
 ---
 

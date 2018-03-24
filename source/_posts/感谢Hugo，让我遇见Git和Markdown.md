@@ -5,7 +5,7 @@ tags:
 - hugo
 - git
 - markdown
-categories: 思考感悟
+categories: 若有所思
 description: 
 photos: /images/20170114/gan_00.png
 ---

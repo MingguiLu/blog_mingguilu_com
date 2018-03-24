@@ -7,7 +7,7 @@ tags:
 - Linux
 - CentOS
 - Docker
-categories: 运维
+categories: 运维之道
 ---
 
 Docker分为Docker-EE(enterprise edition)和Docker-CE(community edition)两个版本；EE是收费版本，由官方技术团队维护和提供技术支持；CE是免费版本，由社区维护和提供技术支持

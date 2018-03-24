@@ -5,7 +5,7 @@ description: ""
 tags:
 - Linux
 - Ubuntu
-categories: 技术分享
+categories: 趣玩尝新
 photos: /images/photos/ubuntu.jpg
 
 ---

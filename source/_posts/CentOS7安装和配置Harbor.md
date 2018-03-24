@@ -7,7 +7,7 @@ tags:
 - Linux
 - CentOS
 - Docker
-categories: 技术分享
+categories: 运维之道
 ---
 
 #### Harbor安装方式
