@@ -153,6 +153,45 @@ ip add查看网卡信息，ens33出现两个IP地址，192.168.1.114是之前DHC
 
 这个方法同样适用于修改静态ip后，重启网络服务新的IP地址不生效的问题
 
+#### 1.11 Home目录下的中文目录名改为英文
+
+##### 1.11.1 方法一：命令
+
+	export LANG=en_US
+	xdg-user-dirs-gtk-update
+
+跳出对话框确认是否将目录转换为英文，同意并关闭
+
+	export LANG=zh_CN
+
+再重启系统，下次登录桌面后，会提示是否把转换好的英文改为中文，选择不再提示，并保持旧名称
+
+![](/images/20161215/Ubuntu_1_11_01.png)
+
+##### 1.11.2 方法二：配置文件
+
+现将中文目录名改为英文目录名
+
+	mv 桌面 Desktop
+	mv 文档 Documents
+	mv 下载 Downloads
+	mv 音乐 Music
+	mv 图片 Pictures
+	mv 视频 Videos
+	mv 公共 Public
+
+修改配置文件 ～/.config/user-dirs.dirs ，将对应的路径改为上面修改的英文名
+
+	vim ~/.config/user-dirs.dirs
+
+	XDG_DESKTOP_DIR="$HOME/Desktop"
+	XDG_DOCUMENTS_DIR="$HOME/Documents"
+	XDG_DOWNLOAD_DIR="$HOME/Downloads"
+	XDG_MUSIC_DIR="$HOME/Music"
+	XDG_PICTURES_DIR="$HOME/Picture"
+	XDG_VIDEOS_DIR="$HOME/Video"
+	XDG_PUBLICSHARE_DIR="$HOME/Public"
+
 ### 2. 常用桌面软件安装
 
 #### 2.1 安装VMware tools (root用户执行)
@@ -440,6 +479,33 @@ Android手机上需要安装KDE Connect的APP，桌面端程序安装如下：
     sudo apt install kdeconnect indicator-kdeconnect
     
 ![](/images/20161215/Ubuntu_2_23_01.png)
+
+#### 2.24 安装firefox
+
+下载firefox安装包：[http://www.firefox.com.cn/](http://www.firefox.com.cn/)
+
+解压安装包，并移动到/opt目录下
+
+tar xvf Firefox-latest-x86_64.tar.bz2
+sudo mv firefox /opt
+
+修改配置文件使firefox图标可以出现在程序中
+
+	vi /usr/share/applications/firefox.desktop
+
+	[Desktop Entry]
+	Name=firefox
+	Name[zh_CN]=火狐浏览器
+	Comment=火狐浏览器
+	Exec=/opt/firefox/firefox
+	Icon=/opt/firefox/browser/icons/mozicon128.png
+	Terminal=false
+	Type=Application
+	Categories=Application;
+	Encoding=UTF-8
+	StartupNotify=true
+
+这时发现firefox没有软件图标，去Google一个firefox图标图片，保存到配置文件中指定的目录和文件名 /opt/firefox/browser/icons/mozicon128.png，稍等一会儿即会自动显示图标
 
 ### 3. 常用工具软件安装
 #### 3.1 安装Albert
