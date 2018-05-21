@@ -28,6 +28,8 @@ categories: 运维之道
 
 同时在gluster-node-1和gluster-node-2上进行
 
+<!--more-->
+
 ##### 查看磁盘信息
 
     [mingguilu@gluster-node-1 ~]$ sudo fdisk -l
@@ -296,4 +298,3 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/glusterd.servic
     [root@centos7-01 harbor]# mount -t glusterfs gluster-node-1:gv0 /data/registry/docker/registry/v2/repositories/
 
 
-<!--more-->

@@ -1,1 +1,0 @@
-This is my blog page: blog.mingguilu.com.
