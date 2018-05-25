@@ -248,7 +248,7 @@ Nginx的反向代理和负载均衡，需要用到HttpProxyMoudule和HttpUpstrea
 
 ##### 访问测试，如果firefox和chrome未达预期效果，试试IE浏览器
 
-![](/images/20180519/20180519_03.png)
+![](/images/20180519/20180519_03.gif)
 
 #### 配置keepalived+nginx高可用
 
@@ -448,7 +448,7 @@ Nginx的反向代理和负载均衡，需要用到HttpProxyMoudule和HttpUpstrea
 
 ##### 访问测试，成功！
 
-![](/images/20180519/20180519_04.png)
+![](/images/20180519/20180519_04.gif)
 
 #####  模拟一下主节点发生故障宕机，备节点接管服务
 
