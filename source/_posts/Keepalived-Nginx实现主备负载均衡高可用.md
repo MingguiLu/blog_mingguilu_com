@@ -98,9 +98,9 @@ description:
 
 nginx默认配置文件定义了虚拟主机配置文件存放在/etc/nginx/conf.d/下，以*.conf结尾
 
-  [root@mg-nginx-03 nginx]# grep "include" /etc/nginx/nginx.conf
-      include       /etc/nginx/mime.types;
-      include /etc/nginx/conf.d/*.conf;
+    [root@mg-nginx-03 nginx]# grep "include" /etc/nginx/nginx.conf
+        include       /etc/nginx/mime.types;
+        include /etc/nginx/conf.d/*.conf;
 
 将缺省的配置文件default.conf拷贝一份重名为blog.conf，并修改配置
 
