@@ -4,7 +4,7 @@ tags:
   - CentOS
   - nginx
   - proxy_pass
-categories: 运维之道 | 编程之路 | 趣玩尝新 | 若有所思
+categories: 运维之道
 photos: /images/20180520/20180520_00.gif
 date: 2018-05-20 12:49:21
 description:
