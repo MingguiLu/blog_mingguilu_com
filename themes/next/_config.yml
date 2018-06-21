@@ -99,6 +99,7 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   #schedule: /schedule/ || calendar
+  candies: /candies/ || cny
   about: /about/ || user
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -139,7 +140,7 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   Instagram: https://instagram.com/kind0214 || instagram
   #Skype: skype:yourname?call|chat || skype
-  微博: http://weibo.com/kind0214
+  微博: http://weibo.com/kind0214 || weibo
 
 social_icons:
   enable: true
