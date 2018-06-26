@@ -10,8 +10,8 @@ photos: /images/photos/ubuntu.jpg
 
 ---
 
-### 1. 初始配置
-#### 1.1 Ubuntu 16.04新特性
+### 初始配置
+#### Ubuntu 16.04新特性
 * 默认禁用dash在线搜索
 
 * 使用GNOME Software代替Ubuntu软件中心
@@ -26,11 +26,11 @@ photos: /images/photos/ubuntu.jpg
 
 <!--more-->
 
-#### 1.2 设置root密码
+#### 设置root密码
 
 	sudo passwd root
 
-#### 1.3 切换到root用户
+#### 切换到root用户
 
 	su
 
@@ -38,27 +38,27 @@ photos: /images/photos/ubuntu.jpg
 
 	sudo -i
 
-#### 1.4 自定义Unity所处位置
+#### 自定义Unity所处位置
 
 	gsettings set com.canonical.Unity.Launcher launcher-position Bottom|Left
 
-#### 1.5 查看Ubuntu版本
+#### 查看Ubuntu版本
 
 	lsb_release -a
 
-#### 1.6 查看内核版本
+#### 查看内核版本
 
 	uname -a
 
-#### 1.7 查看硬件驱动
+#### 查看硬件驱动
 
 	lspci
 
-#### 1.8 打开终端快捷键
+#### 打开终端快捷键
 
 	Ctrl+Alt+T
 
-#### 1.9 切换控制台tty1-tt6
+#### 切换控制台tty1-tt6
 
 	Ctrl+Alt+F1~F6
 
@@ -66,15 +66,15 @@ photos: /images/photos/ubuntu.jpg
 
 	Ctrl+Alt+F7
 
-#### 1.10 网络配置
+#### 网络配置
 
-##### 1.10.1 图形化操作
+##### 图形化操作
 
 系统设置——>网络——>有线/无线——>选项——>IPv4设置——>自动(DHCP)/手动
 
 ![](/images/20161215/Ubuntu_1_10_1_01.png)
 
-##### 1.10.2 终端操作
+##### 终端操作
 
 查看网卡配置文件(/etc/network/interfaces)默认配置如下
 
@@ -153,9 +153,9 @@ ip add查看网卡信息，ens33出现两个IP地址，192.168.1.114是之前DHC
 
 这个方法同样适用于修改静态ip后，重启网络服务新的IP地址不生效的问题
 
-#### 1.11 Home目录下的中文目录名改为英文
+#### Home目录下的中文目录名改为英文
 
-##### 1.11.1 方法一：命令
+##### 方法一：命令
 
 	export LANG=en_US
 	xdg-user-dirs-gtk-update
@@ -168,7 +168,7 @@ ip add查看网卡信息，ens33出现两个IP地址，192.168.1.114是之前DHC
 
 ![](/images/20161215/Ubuntu_1_11_01.png)
 
-##### 1.11.2 方法二：配置文件
+##### 方法二：配置文件
 
 现将中文目录名改为英文目录名
 
@@ -192,9 +192,30 @@ ip add查看网卡信息，ens33出现两个IP地址，192.168.1.114是之前DHC
 	XDG_VIDEOS_DIR="$HOME/Video"
 	XDG_PUBLICSHARE_DIR="$HOME/Public"
 
-### 2. 常用桌面软件安装
+#### 安装zsh
 
-#### 2.1 安装VMware tools (root用户执行)
+安装zsh
+
+	sudo apt install zsh curl
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+查看主题
+
+	ls ~/.oh-my-zsh/themes
+
+或者 
+
+[https://github.com/robbyrussell/oh-my-zsh/wiki/Themes](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)	
+
+设置主题
+
+	vi ~/.zshrc
+
+	ZSH_THEME="steeef"    #修改为自己喜欢的主题名称
+	
+### 常用桌面软件安装
+
+#### 安装VMware tools (root用户执行)
 
 VMware Workstation ——> 虚拟机 ——> 安装VMware Tools
 挂载VMware Tools安装光盘
@@ -225,15 +246,15 @@ DO you still want to proceed with this legacy installer?[no]
 
 接下来一路回车，直至安装完成。重启系统后，即可自适应窗口、拖放文件等
 
-#### 2.2 删除Amazon链接
+#### 删除Amazon链接
 
 	sudo apt-get remove unity-webapps-common  
 
-#### 2.3 卸载Libreoffice
+#### 卸载Libreoffice
 
 	sudo apt-get remove libreoffice-common
 
-#### 2.4 安装 Unity Tweak Tool
+#### 安装 Unity Tweak Tool
 
 	sudo apt-get install unity-tweak-tool
 
@@ -245,7 +266,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	/usr/bin/unity-tweak-tool
 
-#### 2.5 安装[Numix](https://www.numixproject.org/)主题和图标
+#### 安装[Numix](https://www.numixproject.org/)主题和图标
 
 添加Numix源
 
@@ -263,7 +284,7 @@ DO you still want to proceed with this legacy installer?[no]
 在Unity-tweak-tool中启用Numix daily主题和Numix-circle图标
 ![](/images/20161215/Ubuntu_2_5_01.png)
 
-#### 2.6 安装指示器
+#### 安装指示器
 
 大小写指示灯和触摸板开关
 
@@ -273,21 +294,21 @@ DO you still want to proceed with this legacy installer?[no]
     sudo apt-get install indicator-keylock
     sudo apt-get install touchpad-indicator
 
-#### 2.7 安装系统监测工具Syspeek
+#### 安装系统监测工具Syspeek
 ![](/images/20161215/Ubuntu_2_7_01.png)
 
 	sudo add-apt-repository ppa:nilarimogard/webupd8    
 	sudo apt-get update    
 	sudo apt-get install syspeek
 
-#### 2.8 安装经典菜单插件
+#### 安装经典菜单插件
 ![](/images/20161215/Ubuntu_2_8_01.png)
 
 	sudo add-apt-repository ppa:diesch/testing  
 	sudo apt-get update  
 	sudo apt-get install classicmenu-indicator
 
-#### 2.9 安装Google Chrome浏览器
+#### 安装Google Chrome浏览器
 
 	sudo apt-get install google-chrome-stable
 
@@ -295,8 +316,8 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo apt-get -f install
 
-#### 2.10 安装Adobe Flash Player
-##### 2.10.1 在Firefox中打开 https://get.adobe.com/flashplayer/?loc=cn
+#### 安装Adobe Flash Player
+##### 在Firefox中打开 https://get.adobe.com/flashplayer/?loc=cn
 已自动识别出：`Linux 64-bit, 简体中文, Firefox`，选择版本为
 
 	.tar.gz 适用于 Linux
@@ -308,7 +329,7 @@ DO you still want to proceed with this legacy installer?[no]
 	sudo cp libflashplayer.so /usr/lib/firefox-addons/plugins/ -v
 	sudo cp -r usr/* /usr
 
-##### 2.10.2 在Chrome中打开 https://get.adobe.com/cn/flashplayer/otherversions/
+##### 在Chrome中打开 https://get.adobe.com/cn/flashplayer/otherversions/
 
 选择操作系统为：
 
@@ -328,7 +349,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo mkdir /usr/lib/adobe-flashplugin
 
-#### 2.11 配置[老D的Google Hosts](https://laod.cn/hosts/2016-google-hosts.html)
+#### 配置[老D的Google Hosts](https://laod.cn/hosts/2016-google-hosts.html)
 下载老D最新的Google hosts文件，添加以下部分到 `/etc/hosts`
 
 	# Modified hosts start
@@ -345,7 +366,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo systemctl restart NetworkManager
 
-#### 2.12 添加Ubuntu Kylin的apt源,方便安装常用的桌面软件
+#### 添加Ubuntu Kylin的apt源,方便安装常用的桌面软件
 
 	sudo vim /etc/apt/sources.list.d/ubuntukylin.list
 
@@ -353,11 +374,11 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo apt-get update
 
-#### 2.13 安装搜狗输入法
+#### 安装搜狗输入法
 
 	sudo apt-get install sogoupinyin
 
-#### 2.14 安装[网易云音乐](http://music.163.com/)
+#### 安装[网易云音乐](http://music.163.com/)
 
 	sudo apt-get install netease-cloud-music
 
@@ -369,7 +390,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo　apt-get -f install
 
-#### 2.15 安装[有道词典](http://cidian.youdao.com/index-linux.html)
+#### 安装[有道词典](http://cidian.youdao.com/index-linux.html)
 ![](/images/20161215/Ubuntu_2_15_01.png)
 
 参考：[Ubuntu 16.04安装有道词典](http://www.linuxdiyf.com/linux/20622.html)
@@ -402,7 +423,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	未安装软件包 gstreamer0.10-plugins-ugly
 
-#### 2.16 安装[WPS Office](http://community.wps.cn/download/)
+#### 安装[WPS Office](http://community.wps.cn/download/)
 
 下载 wps-office_10.1.0.5672~a21_amd64.deb 并安装
 
@@ -412,18 +433,18 @@ DO you still want to proceed with this legacy installer?[no]
 
 百度云分享链接: http://pan.baidu.com/s/1pL6ONHL 密码: 2stm
 
-#### 2.17 安装Shadowsocks
+#### 安装Shadowsocks
 
 	sudo add-apt-repository ppa:hzwhuang/ss-qt5
   	sudo apt-get update
 	sudo apt-get install shadowsocks-qt5
 
-#### 2.18 安装Irssi
+#### 安装Irssi
 
 	sudo apt-get install screen
 	sudo apt-get install irssi
 
-#### 2.19 安装迅雷的替代者Xware-desktop
+#### 安装迅雷的替代者Xware-desktop
 
 ![](/images/20161215/Ubuntu_2_19_01.png)
 
@@ -433,7 +454,7 @@ DO you still want to proceed with this legacy installer?[no]
 	sudo dpkg -i xware-desktop_0.11.20140723_amd64.deb
 	sudo apt-get install -f
 
-#### 2.20 安装[Vivaldi浏览器](https://vivaldi.com)
+#### 安装[Vivaldi浏览器](https://vivaldi.com)
 
 ![](/images/20161215/Ubuntu_2_20_01.png)
 
@@ -441,12 +462,12 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo dpkg -i vivaldi-stable_1.6.689.46-1_amd64.deb
 
-#### 2.21 自定义截图快捷键
+#### 自定义截图快捷键
 系统设置——>键盘——>快捷键——>截图
 
 ![](/images/20161215/Ubuntu_2_21_01.png)
 
-#### 2.22 安装[Teamviewer](https://www.teamviewer.com/zhcn/)
+#### 安装[Teamviewer](https://www.teamviewer.com/zhcn/)
 
 ![](/images/20161215/Ubuntu_2_22_01.png)
 
@@ -466,7 +487,7 @@ DO you still want to proceed with this legacy installer?[no]
 
 	sudo dpkg -i teamviewer_12.0.71510_i386.deb 
 
-#### 2.23 安装KDE Connect
+#### 安装KDE Connect
 
 KDE Connect用于linux桌面和Android手机之前传输文件 ,虚拟输入等
 
@@ -480,7 +501,7 @@ Android手机上需要安装KDE Connect的APP，桌面端程序安装如下：
     
 ![](/images/20161215/Ubuntu_2_23_01.png)
 
-#### 2.24 安装firefox
+#### 安装firefox
 
 下载firefox安装包：[http://www.firefox.com.cn/](http://www.firefox.com.cn/)
 
@@ -507,8 +528,8 @@ sudo mv firefox /opt
 
 这时发现firefox没有软件图标，去Google一个firefox图标图片，保存到配置文件中指定的目录和文件名 /opt/firefox/browser/icons/mozicon128.png，稍等一会儿即会自动显示图标
 
-### 3. 常用工具软件安装
-#### 3.1 安装Albert
+### 常用工具软件安装
+#### 安装Albert
 
 ![](/images/20161215/Ubuntu_3_1_01.gif)
 
@@ -518,19 +539,19 @@ sudo mv firefox /opt
 	sudo apt-get update
 	sudo apt-get install albert
 
-#### 3.2  安装Vim
+#### 安装Vim
 
 	sudo apt-get install vim
 
-#### 3.3 安装Filezilla
+#### 安装Filezilla
 
 	sudo apt-get install filezilla
 
-#### 3.4 安装[Git](https://git-scm.com/)
+#### 安装[Git](https://git-scm.com/)
 
 	sudo apt-get install git
 
-#### 3.5 安装[Sublime Text 3](www.sublimetext.com/)
+#### 安装[Sublime Text 3](www.sublimetext.com/)
 
 	sudo add-apt-repository ppa:webupd8team/sublime-text-3    
 	sudo apt-get update    
@@ -542,25 +563,25 @@ sudo mv firefox /opt
 
 关于Sublime Text 3在Ubuntu下无法输入中文的问题，尝试了网上很多方法都没有解决
 
-#### 3.6 安装[Notepadqq](http://notepadqq.altervista.org/wp/download/)
+#### 安装[Notepadqq](http://notepadqq.altervista.org/wp/download/)
 Notepadqq功能近似于Windows下的Notepad++
 
 	sudo add-apt-repository ppa:notepadqq-team/notepadqq
 	sudo apt-get update
 	sudo apt-get install notepadqq
 
-#### 3.7 安装[Atom](https://atom.io/)
+#### 安装[Atom](https://atom.io/)
 安装过程因为下载速度奇慢，建议单独开一个Terminal,耐心等待
 
 	sudo add-apt-repository ppa:webupd8team/atom
 	sudo apt-get update
 	sudo apt-get install atom
 
-#### 3.8 安装Hugo(由Go语言实现的静态网站生成器)
+#### 安装Hugo(由Go语言实现的静态网站生成器)
 
 	sudo apt-get install hugo
 
-#### 3.9 安装[VMware Workstation](https://my.vmware.com/cn/web/vmware/login)
+#### 安装[VMware Workstation](https://my.vmware.com/cn/web/vmware/login)
 下载[VMware Workstation Pro for Linux](https://my.vmware.com/cn/group/vmware/details?downloadGroup=WKST-1252-LX&productId=524&rPId=13365)
 安装方法参考官方文档：http://pubs.vmware.com/workstation-12/index.jsp#com.vmware.ws.using.doc/GUID-1F5B1F14-A586-4A56-83FA-2E7D8333D5CA.html
 
@@ -569,7 +590,7 @@ Notepadqq功能近似于Windows下的Notepad++
 
 稍等弹出图形化的安装界面，与windows上安装相似，一路下一步至安装完毕。
 
-#### 3.10　安装[Visual Studio Code](https://code.visualstudio.com/)
+#### 安装[Visual Studio Code](https://code.visualstudio.com/)
 
 ![](/images/20161215/Ubuntu_3_10_01.png)
 
@@ -579,9 +600,9 @@ Notepadqq功能近似于Windows下的Notepad++
 
 	sudo dpkg -i code_1.10.1-1488415350_amd64.deb
 
-### 4. 使用Samba与Windows共享文件
+### 使用Samba与Windows共享文件
 
-#### 4.1 搭建Samba服务
+#### 搭建Samba服务
 
 安装samba和smbclient
 
@@ -651,7 +672,7 @@ Notepadqq功能近似于Windows下的Notepad++
 
 	sudo smbstatus
 
-#### 4.2 在Windows上访问Ubuntu的共享目录
+#### 在Windows上访问Ubuntu的共享目录
 
 Windows上使用FQDN路径访问，在开始或者资源管理器地址栏输入：
 
@@ -674,7 +695,7 @@ Windows上映射samba共享目录为网络映射驱动器
 
 ![](/images/20161215/Ubuntu_4_2_03.png)
 
-#### 4.3 在Ubuntu上访问Windows共享目录
+#### 在Ubuntu上访问Windows共享目录
 
 在Ubuntu文件管理器上，点击“连接到服务器”，输入: smb://192.168.1.110 ，点击“连接”
 
@@ -707,7 +728,7 @@ Windows上映射samba共享目录为网络映射驱动器
 			(In some cases useful info about processes that
 			 use the device is found by lsof(8) or fuser(1).)
 
-### 5. 使用ssh远程登录Ubuntu
+### 使用ssh远程登录Ubuntu
 
 Ubuntu16.04默认安装了“openssh-client”，但未安装“openssh-server”，在远程ssh时会提示：
 
