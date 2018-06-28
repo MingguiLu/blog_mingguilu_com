@@ -99,8 +99,8 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   #schedule: /schedule/ || calendar
-  candies: /candies/ || cny
   about: /about/ || user
+  candies: /candies/ || cny
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
