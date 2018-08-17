@@ -1,10 +1,10 @@
 ---
-title: Account locked due to 13 failed logins
+title: 【Linux】Account locked due to 13 failed logins
 tags:
   - account locked 
   - ssh账户锁定
   - ssh账户解锁
-categories: 运维之道
+categories: 点滴随笔
 photos: 
 date: 2018-06-27 10:25:38
 description:
