@@ -1,12 +1,12 @@
 ---
 title: 【Linux】计划任务atd和crond服务
 tags:
-  - Linux
+  - linux
   - atd
   - crond
   - 计划任务
 categories: 点滴随笔
-photos: 
+photos: /images/photos/linux.jpg
 date: 2018-08-16 16:33:27
 description:
 ---
@@ -95,15 +95,17 @@ cron计划任务参数格式：
 
 ##### 示例一
 
+    # chmod +x /data/scripts/backup.sh 
+
     # cat /data/scripts/backup.sh 
     #!/bin/bash
-    /usr/bin/cp -a /data/helloworld /data/backup/helloworld.$(date +%Y%m%d-%H:%M:%S)
+    /usr/bin/cp -a /data/helloworld /data/backup/helloworld.$(date +%Y%m%d-%T)
 
     # crontab -e
     crontab: installing new crontab
 
     # crontab -l
-    */1 * * * * sh /data/scripts/backup.sh  #每分钟备份一次/data/helloworld至/data/backup
+    */1 * * * * /data/scripts/backup.sh  #每分钟备份一次/data/helloworld至/data/backup
 
     # ll /data/backup/
     total 0
@@ -124,7 +126,7 @@ cron计划任务参数格式：
 
     # crontab -l -u itadmin
     #每分钟检查一次内存用量
-    */1 * * * * /usr/bin/free -m > /home/itadmin/checkMem/$(/bin/date +\%Y\%m\%d-\%H:\%M:\%S).log
+    */1 * * * * /usr/bin/free -m > /home/itadmin/checkMem/$(/bin/date +\%Y\%m\%d-\%T).log
 
     # ll /home/itadmin/checkMem
     total 112
@@ -141,5 +143,6 @@ cron计划任务参数格式：
 * crontab可以以#号开头写上注释信息，便于快速理解任务的信息
 * crontab参数中所有的命令用绝对路径方式来写，避免用户未加载的环境变量导致任务失败
 * 可以用 whereis 来查询命令的绝对路径
-* crontab系统变量需要使用反斜杠转义,如上 $(/bin/date +\%Y\%m\%d-\%H:\%M:\%S).log
+* crontab系统变量需要使用反斜杠转义,如上 $(/bin/date +\%Y\%m\%d-\%T).log
+* crontab文件中执行脚本，如不加/usr/bin/sh，则必须给脚本文件执行权限
 
