@@ -175,7 +175,7 @@ Nicehash Miner Legacy不支持自动寻找最优矿池，需要手动设置，�
 
 免登陆情况下直接访问：https://www.nicehash.com/miner/你的Nicehash钱包地址
 
-#### 结算和体现
+#### 结算和提现
 
 Nicehash每天下午6点左右支付到BTC钱包，但未支付的余额需大于0.001BTC
 
