@@ -1,7 +1,7 @@
 ---
 
 date: 2017-02-27T08:47:45+08:00
-title: Ubuntu磁盘空间不足:卷boot仅剩余xxMB的磁盘空间
+title: Ubuntu磁盘空间不足问题
 description: ""
 tags:
 - Linux
