@@ -145,7 +145,14 @@ GC: Garbage Collection，垃圾回收器
 
 #### 企业级JDK应用
 
+* sun： JRE、JDK
+* OpenSource：  OpenJDK
 
+#### JDK安装
+
+##### rpm包
+
+##### 
 
 #### 参考文档
 
