@@ -150,7 +150,15 @@ GC: Garbage Collection，垃圾回收器
 
 #### JDK安装
 
+[Oracle JAVA SE 下载地址](https://www.oracle.com/technetwork/java/javase/archive-139210.html)
+
+* rpm
+* 通用二进制
+* 源码编译
+
 ##### rpm包
+
+
 
 ##### 
 
