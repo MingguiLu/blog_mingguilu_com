@@ -40,8 +40,10 @@ description:
     yum-metadata-parser-1.1.2-16.el6.x86_64.rpm
     yum-plugin-fastestmirror-1.1.30-14.el6.noarch.rpm
 
-网上搜一下很多wget下载的链接，经实测，
 
+百度云链接： https://pan.baidu.com/s/1zXJpbmuL1vGdTLcA5gBcyw 提取码: dbec
+
+网上搜一下很多wget下载的链接，经实测，
 
     #链接有效，可以下载：
     wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm
@@ -105,3 +107,7 @@ description:
       lrzsz.x86_64 0:0.12.20-27.1.el6                                                                           telnet.x86_64 1:0.17-48.el6       
 
 ---
+
+#### 参考文档
+
+* 红帽6重装yum所需的rpm包下载备用链接: [http://metastead.com/7SpB](http://metastead.com/7SpB)

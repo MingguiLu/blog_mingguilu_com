@@ -48,7 +48,13 @@ description:
 
 <!--more-->
 
-下载地址：[程序员的英语(English for Developers)-mp3.7z](http://turboagram.com/19004457/english-for-developers-mp3)
+下载地址：链接: https://pan.baidu.com/s/1uiz6ThqbvDMbVaf5OVwstg 提取码: j6g6
+
+---
+
+#### 参考文档
+
+* 备用下载地址：[程序员的英语(English for Developers)-mp3.7z](http://turboagram.com/19004457/english-for-developers-mp3)
 
 
 

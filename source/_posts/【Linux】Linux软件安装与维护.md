@@ -8,18 +8,98 @@ tags:
 - apt-get
 - rpm
 - yum
-title: Linux软件安装与维护
-categories: 运维之道
+title: 【Linux】Linux软件安装与维护
+categories: 点滴随笔
 photos: /images/photos/linux_software.jpg
 
 ---
 
-### 1. 使用软件源码包
+### 使用软件源码包
 
-### 2. Debian/Ubuntu
+#### 跨代码文件的依赖关系
+
+手动编译难度高，需要使用项目管理器：
+
+- c、c++: make (configure + Makefile.in ——> makefile)
+	- 源代码 ——> 预处理 ——> 编译(gcc) ——> 汇编 ——> 链接 ——> 执行
+- java: maven
+
+#### 开发工具
+
+- autoconf： 生成configure脚本
+- automake： 生成Makefile.in
+
+#### 编译安装三步骤
+
+- ./configure: 
+	- 通过选项传递参数，指定启用特性、安装路径等；执行时参数结合Makefile.in来生成makefile
+	- 检查依赖的外部环境
+- make
+	- 根据makefile构建应用程序
+- make install
+	- 实际执行脚本，将构建好的二进制应用程序和库文件复制(install命令)到指定的目录中去
+
+#### 编译c源代码
+
+- 开发工具： make、gcc等
+- 开发环境： 开发库、头文件
+	- glibc: 标准库
+- 通过“包组”提供开发组件
+	- CentOS 5： Development Tools、Development Library 
+	- CentOS 6： Development Tools、Server Platform Development
+	- CentOS 7:  Development Tools
+		- yum groupinstall 'Development Tools'
+
+#### configure脚本
+
+- ./configure --help 查看配置文件参数
+	- Configuration 对./configure脚本本身运行的过程进行配置
+	- Installation directories 程序安装目录
+		- --prefix=DIR 指定默认安装路径，默认是/usr/local
+		- --sysconfdir=DIR 配置文件安装路径,默认是 PREFIX/etc
+	- Program names 改变安装后程序的名称
+	- System types 形成各个平台的安装版本，即交叉编译
+	- Optional Features 可选特性
+		- --disable-FEATURE
+		- --enable-FEATURE[=ARG]
+	- Optional Packages 可选包
+		- --with-PACKAGE[=ARG]
+  		- --without-PACKAGE 
+	- Some influential environment variables 影响安装的环境变量
+
+#### make
+
+#### make install
+
+#### 安装后的配置
+
+##### 导出二进制的程序目录至PATH环境变量中
+
+vim /etc/profile/NAME.sh
+export PATH=/PATH/TO/BIN:$PATH
+
+##### 导出库文件路径
+
+vim /etc/ld.so.conf.d/NAME.conf
+添加新的库文件所在目录之词文件中
+
+让系统重新生成缓存： ldconfig [-v]
+
+##### 导出头文件
+
+基于链接的方式实现
+ln -sv 
+
+##### 导出帮助手册
+
+vim /etc/man.conf
+MANPATH /PATH/TO/MAN
+
+
+### Debian/Ubuntu
 Debian系Linux发行版的软件包格式为deb
 
-#### 2.1 dpkg
+#### dpkg
 dpkg的是基于Debian系统的一个低级包管理器。它可以安装，删除，提供有关资料，以及建立*.deb包，但它不能自动下载并安装它们相应的依赖包。
 
 <!--more-->
@@ -112,8 +192,8 @@ dpkg的是基于Debian系统的一个低级包管理器。它可以安装，删�
 	dpkg --version
 
 
-#### 2.2 apt-cache、apt-get
-##### 2.2.1 apt-cache
+#### apt-cache、apt-get
+##### apt-cache
 apt-cache是Linux下的apt软件包管理工具，使用它能查询到apt的二进制软件包缓存文件,结合一些参数使用能查寻到软件包信息和软件包依赖关系等
 
 列出所有软件包的名称
@@ -142,7 +222,7 @@ apt-cache是Linux下的apt软件包管理工具，使用它能查询到apt的二
 
 	apt-cache stats
 
-##### 2.2.2 apt-get
+##### apt-get
 apt-get是Debian及其衍生版的高级包管理器，并提供命令行方式来从多个来源检索和安装软件包，其中包括解决依赖性。和dpkg不同的是，apt-get不是直接基于.deb文件工作，而是基于软件包的正确名称。
 
 更新软件源（/etc/apt/source.list）
