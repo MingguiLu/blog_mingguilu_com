@@ -41,10 +41,13 @@ description:
     yum-plugin-fastestmirror-1.1.30-14.el6.noarch.rpm
 
 
+<<<<<<< HEAD
 百度云链接： https://pan.baidu.com/s/1zXJpbmuL1vGdTLcA5gBcyw 提取码: dbec
 
 网上搜一下很多wget下载的链接，经实测，
 
+=======
+>>>>>>> 86311a48b0ec47bab3285c79639e8c2ab7bbcba3
     #链接有效，可以下载：
     wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-metadata-parser-1.1.2-16.el6.x86_64.rpm
     wget http://mirrors.163.com/centos/6/os/x86_64/Packages/python-iniparse-0.3.1-2.1.el6.noarch.rpm
@@ -53,6 +56,8 @@ description:
     # 链接无效，无法下载：
     wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-3.2.29-40.el6.centos.noarch.rpm
     wget http://mirrors.163.com/centos/6/os/x86_64/Packages/yum-plugin-fastestmirror-1.1.30-14.el6.noarch.rpm
+
+百度云网盘下载链接： https://pan.baidu.com/s/1wDbfBfUgoX3OvpFkB1velw 提取码: 27fk 
 
 #### 安装rpm包
 
@@ -110,4 +115,8 @@ description:
 
 #### 参考文档
 
+<<<<<<< HEAD
 * 红帽6重装yum所需的rpm包下载备用链接: [http://metastead.com/7SpB](http://metastead.com/7SpB)
+=======
+* 备用下载链接： [红帽6重装yum所需的rpm包(Redhat_6.x_yum_solution).zip:](http://metastead.com/7SpB)
+>>>>>>> 86311a48b0ec47bab3285c79639e8c2ab7bbcba3
